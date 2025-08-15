@@ -18,16 +18,13 @@ jobs:
         with:
           python-version: '3.9'
       - name: 安裝 Python 依賴
-        working-directory: ./python_app # ✨ 工作目錄為 python_app ✨
+        working-directory: ./project1 # ✨ 工作目錄為 project1 ✨
         run: pip install -r requirements.txt
       - name: 執行 Python 測試
-        working-directory: ./python_app # ✨ 工作目錄為 python_app ✨
-        run: python -m unittest discover tests # 從 python_app 目錄開始尋找 tests
+        working-directory: ./project1 # ✨ 工作目錄為 project1 ✨
+        run: python -m unittest discover tests # 從 project1 目錄開始尋找 tests
         # ✨ 新增：生成部署所需的 HTML 檔案 ✨
       - name: 生成報告 HTML
-        working-directory: ./python_app
+        working-directory: ./project1
         run: python src/generator.py
       # ✨ 新增：上傳構建產物 (HTML 檔案) 以便部署作業使用 ✨
-
-      - name: 檢查輸出檔案
-        run: ls -R ./python_app/output
