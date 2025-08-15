@@ -15,7 +15,7 @@ jobs:
   build-and-test:
     # 作用：指定執行環境
     runs-on: ubuntu-latest
-    # 作用：定義這個 job 需要執行的步驟
+    # 作用：定義這個 job 需要執行的步 驟
     steps:
       # 步驟名稱:確認代碼庫內容
       - name: Checkout code 
