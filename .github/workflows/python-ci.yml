@@ -1,7 +1,7 @@
 # file: .github/workflows/python-ci.yml
 # 定義這個 workflow 的名稱，會顯示在 GitHub Actions 頁面上。
 name: Python CI
-# 作用：指定 workflow 觸發的事件。目前監控 push 和 pull_request事件
+# 作用：指定 workflow 觸發的事件。目前監控 push 和 pull_request 事件
 on:
   # 當執行push到該分支時觸發
   push:
